@@ -1,0 +1,38 @@
+body{
+            height: 100vh;
+            cursor: none;
+        }
+.cursor-dot{
+    width: 7px;
+    height: 7px;
+    background-color: #91765a;
+}
+.cursor-outline{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #91765a;
+}
+.cursor-dot,
+.cursor-outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+@media screen and (max-width: 600px) {
+    .cursor-dot{
+        display: none;
+    }
+    .cursor-outline{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    body{
+        height: 100vh;
+        cursor:grab;
+    }  
+}
